@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de operadores</title>
+</head>
+<body>
+    <script>
+        /*      OPERADORES ARITIMÉTICOS
+        
+        5 + 2 -> 7
+           5 - 2 -> 3
+           5 * 2 -> 10
+           5 / 2 -> 2.5
+           5 % 2 -> 1   % quer dizer resto da divizão inteira
+           5 ** 2 -> 25 ** símbolo da potenciação.
+           
+           AS ORDENS DE PRECEDÊNCIA DOS OPERADORES SÃO:
+           DAS MAIS  IMPORTANTES PARA AS MENOS-> () -> ** -> *,/,% -> +,-
+           */   
+
+           /*   OPERADIRES DE ATRIBUIÇÃO
+           
+           ATRIBUIÇÕES SIMPLES:                   AUTO-ATRIBUIÇÕES
+           var a = 5+3 -> 8                         var n=3         ou simplificando        Outra forma de simplificar para add ou remover mais um número:
+           var b = a%5 -> 3                         n=n+4 -> 7      n += 4                  n++
+           var c = 5*b**2 -> 45                     n=n-5 -> 2      n -= 5                  n--
+           var d = 10-a/2 -> 6                      n=n*4 -> 8      n *= 4
+           var e = 6*2/d -> 2                       n=n/2 -> 4      n /= 2
+           var f = b%e+4/e -> 3                     n=n**2 -> 16    n **= 2
+                                                    n=n%5 -> 1      n %= 5
+            */        
+           
+            /*  OPERADORES RELACIONAIS
+            > , < , >= , <= , == , !=  //Para toda expressão que tenha um valor relacional ligada a ela, o resultado dessa expressão
+                                        vai ser sempre um valor boleano. valor do tipo verdadeiro ou falso.
+
+            //tem um operador de identidade que é o símbolo === que quer dizer se o número é identico ao outro,ele é diferente de
+            iqualdade do == 
+            
+            ex: 5 == 5 -> true
+                5 == "5" -> true   // O 5 é um Number e o "5" é uma String, mas para o JS ainda é true. independente do tipo.
+                5 === "5" -> false  //aqui é para saber se é identico, tanto de algarismo, quanto de tipo.
+                5 !== "5" -> true // é o símbolo de desigual restrito.
+
+                OPERADORES LÓGICOS
+            ! , && , ||     // ! -> negação, quer dizer NÃO. 
+                            // && -> conjunção, é o E em lógica.   
+                            // || -> disjunção, é o OU loógico.
+            
+            ! -> True ou False               // Operador UNÁRIO, só tem um operando. True ou false ou uma expressão que de isso.
+            && ->   true && true -> true                         // É um operador binário também, com dois valores lógicos.
+                    true && false -> false                          para o resultado ser true, as duais condiçoes dem que ser atendidas.
+                    false && true -> false                          ou seja, true
+                    false && false -> false
+            
+            
+            || ->   true || true -> true                          //É um operador binário. Para o resultado ser true, somente uma 
+                    true || false -> true                           Somente uma condicão precisa ser true.          
+                    false || true -> true
+                    false || false -> false
+
+
+             */
+
+            /* Ordem de execução dos operadores em uma expressão:
+            var a = 5
+            var b = 8
+           
+            a > b && b % 2 == 0     //Operadores aritimeticos, relacionais e lógicos na mesma expressão. A ordem é:
+                                      Primeiro Operadores aritiméticos b % 2, Depois operadores relacionais a > b == 0                              
+            TRUE                      por último os operadores lógicos &&.
+            a <= b || b / 2 == 2
+            TRUE   
+
+            Se numa mesma expressão tiver && , ! e || a ordem de execução é:  ! -> && -> ||.
+
+            Exemplo:
+            idade >= 15 && idade <= 17            // a idade está entre 15 e 17 ano?
+            estado == "RJ" || estado =="SP"       // o estado é RJ ou SP?
+            salario > 1500 && sexo != "M"         // o salário é acima de R$ 1.500 e não é homem?
+    
+                
+                OPERADORES TERNÁRIO
+                ?  :                 // junta três operadores é um resultado que dá verdadeiro ou falso dependendo do teste lógico que vem em
+                                        primeiro lugar. 
+
+                exemplo:
+                teste ? true : false
+
+                var média = 5.5
+                média >= 7.0 ? "aprovado" : "Reprovado"
+                "Reprovado"
+                
+                var x = 8
+                var res = x % 2 == 0 ? 5 : 9
+                res == 5 
+
+                var idade = 19
+                var r = idade >= 18 ? "maior" : "menor"
+                r == "maior"*/
+    </script>
+</body>
+</html>

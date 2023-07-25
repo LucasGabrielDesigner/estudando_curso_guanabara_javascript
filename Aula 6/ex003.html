@@ -26,18 +26,38 @@
         /*Agora, comentário em mais de 1 linha
         é assim.*/
        
-        var n1 = Number(window.prompt('Digite um novo número:')) //O prompt sempre retorna uma String.
+        var n1 = Number(window.prompt('Digite um novo número:')) //O prompt sempre retorna uma String. Aqui usei o Number na frente já pra converter para número.
         var n2 = Number(window.prompt('digite outro número')) //String.
-        //Para conver para número inteito ou real pode-se usar Number que é mais atual ou Number.parseInt(para inteiro) e Number.parseFloat(para real)
+        
+        /*Para conver para número inteito ou real pode-se usar Number que é mais atual ou Number.parseInt(para inteiro) e 
+        Number.parseFloat(para real)*/
+        
         var s = n1 + n2
+       
         window.alert(`A soma entre ${n1} e ${n2} é iqual a: ${s}`) 
-        /*  (number + namber) para edição
+       
+            /*(number + namber) para edição
             (string + string) para concatenação*/
             
 
             /* Dá para converter Number > String 
             você pode usar String( o conteúdo que quer converter) iqual como faz o Number
             ou conteudo por fora coloca .toString() */
+
+            /* Formatando de STRING
+            são 3 formas: 
+            var s  = "qualquer coisa"
+            "Eu estou aprendendo s " //Não faz interpolação dos dados
+            "Eu estou aprendendo" + s // Usa Concatenação (simbolo + seguinifica concatenação)
+            `Eu estou aprendendo ${s}` // Usa templete String ou seja, uma forma mais simplificada de escrita. Usa Crases
+            e Sifrão tipo dolar e {}*/
+
+            /* Formatando de STRING
+            Outros tipos por exemplo são:
+            var s  = "qualquer coisa"
+            s.length //quantos caracteres a stirng tem
+            s.toUpperCase() // Tudo para 'MAIÚSCULAS' 
+            S.toLowerCase() // Tudo para 'minúsculas'*/  
 
             
     </script>

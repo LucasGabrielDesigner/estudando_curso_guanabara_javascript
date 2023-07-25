@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ex 005 primeiros passos com DOM</title>
+        <style>
+            body{
+                background: rgb(68,125,199);
+                color: white;
+                font: 18pt arial normal;
+            }
+        </style>
+    </head>
+
+    <body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <!--
+    DOM é Document Object Model opu seja, um modelo de objetos para documentos. Um conjunto de objetos dentro do navegador que da acesso aos
+    componentes internos do site. OBS: o DOM só funciona quando está rodando JS dentro do  navegador.
+
+    Exemplo de Arvore DOM:
+    
+                window
+        |         |          |   
+    location - document - history
+                  |
+                 html
+                  |
+                |   |   
+              body,head
+               |     |         
+(h1 - p - p - div) (meta - title)   
+          |
+        strong     
+            
+            
+-->
+    <script>
+     //Estou utilizando o var só pra aprender melhor, quando estiver estudando sobre escorpo não usarei
+
+
+        var corpo= window.document.body // criei a var para armazenar o body  e depois modificar o style pelo JS
+        var p1= window.document.getElementsByTagName("p")[1] //POR MARCA // Crie o a var para pegar <p> do <html>
+        //var d= document.getElementById("msg")
+     
+        document.write("Está escrito assim:"+p1.innerText) //innerText  é o texto que está dentro do html<p> nesse caso
+        document.write(p1.innerHTML)  //innertText puxa o desto sem formatação innerHTML vem tudo.
+        
+        p1.style.color = "yellow" //é um modo de accesar o DOM para alterar nesse caso o CSS color e mudar para amarelo.
+        corpo.style.background = "black"
+        d.style.background="green" 
+       d.innerText="Estou aguardando..."
+        var e=document.querySelector("div#msg")
+        e.style.background="blue"
+
+        /*
+        p1.style.color = "yellow" 
+        corpo.style.background = "black"        Esses exemplos aqui são formas de acessar o DOM e modificar CSS e html através do JS
+        d.style.background="green" 
+       d.innerText="Estou aguardando..."
+        var e=document.querySelector("div#msg")
+        e.style.background="blue"
+       
+        */
+     /*
+        5 tecnica de como selecionar os elementos para navegar pela arvore DOM.
+        
+        POR MARCA (ou tagname)
+        Comando é: getElementsByTagName()
+        Quando tiver mais de uma tag e quiser escolher entre elas, tem que colocar[] e dentro colocar o número da posição da tag 
+
+        POR ID
+        Comando é: getElementByiId()
+
+        POR NOME
+        Comando é: getElementsByName()
+        
+        POR CLASSE
+        Comando é: getElementsByClassName()
+
+        POR SELETOR
+        Comando é: querySelector()
+                   querySelectorAll() 
+        
+        querySelector() seleciona qualquer elemento anterior no singular.
+        querySelectorAll() é a forma do plural selecionando qualque outra tipo de seletor, só que no plural.
+        
+        
+        
+        */
+
+
+    </script>
+
+    
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos  com DOM EX006</title>
+    <style>
+        div#area{
+            font: 20pt arial normal;
+            background-color: green;
+            color: rgb(255, 255, 255);
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="area">Interaja...</div>
+   <!--<div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Interaja...</div>
+caso queira disparar os eventos no html e puxar no JS  pode ser feito dessa forma-->
+   
+    <!--Em uma DIV por exemplo, pode se ter evento de DOM com o mouse do PC
+    
+        mouseenter  (quando o mouse entra na DIV)
+        mousemove   (quando o mouse se movimenta pela DIV)
+        mousedown   (qaundo o mouse botão do mouse é clicado e segurado)
+        mouseup     (quando despreciona o botão do mouse)
+        click       (quando mouse é precionado normalmente)
+        mouseout    (quando mouse sai da area da DIV)
+    
+        Para executar essas funções que não são automaticas, assim que o Js é lido pelo navegador. 
+        Vai precisar estar dentro de um bloco de JS para serem executadas quando o evento ocorrer.
+        Exemplo:
+        {
+            Bloco de códigos
+        }
+        
+        Esse bloco tem que ser nomeado com uma function{ } é sempre bom dar nome as funções que vão executar a ação. geralmente o 
+        nome da função é colocado iqual o nome da ação que ela vai executar. tipo: 
+        
+        function ação(){
+
+        }
+
+
+    -->
+    
+    <script>
+     var a = document.getElementById("area")
+     a.addEventListener("click", clicar)        // a.addEventListener() é como faz o JS prestar atenção nos eventos para poder disparar os eventos
+     a.addEventListener("mouseenter", entrar)   // dessa forma o código vica mais limpo e mais bem separado entre as tecnologias.
+     a.addEventListener("mouseout", sair)                               
+    
+     function clicar(){
+     a.innerText = "Clicou!"
+     a.style.background = "red"
+    }
+
+    function entrar(){
+    a.innerText = "Entrou!"
+    }
+
+    function sair(){
+    a.innerText = "Saiu!"
+    a.style.background = "green"
+    }
+    </script>
+</body>
+</html>
