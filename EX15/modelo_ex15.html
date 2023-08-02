@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos ex aula 15</title>
+    <link rel="stylesheet" href="modelo_ex15_css.css">
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div >
+            <p>Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <p>Sexo:
+            <input type="radio" name="txtano" id="mas" checked >
+            <label for="mas">Masculino</label>
+            <input type="radio" name="radsex" id="fem">
+            <label for="fem">Feminino</label>
+        </p>
+        <p>
+            <input type="button" value="Verificar" onclick="verificar()">
+        </p>
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    <footer>
+        <p>&copy; feito nas aulas do curso em vídeo.
+            <a class="link_rodape" href="https://www.lucasgabrieldesigner.com" target="_blank">Lucas Gabriel</a>
+        </p>
+    </footer>
+    <script src="modelo_ex15_js.js"></script>
+</body>
+</html> 
